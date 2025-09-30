@@ -37,83 +37,93 @@ class Program
 
     static void Main()
     {
-        while (true)
+        bool exit = false;
+        while (!exit)
         {
-            Console.WriteLine("\nВыберите тип объекта: Planet, Comet, Satellite или Exit для выхода");
-            string index = Console.ReadLine()?.Trim();
+            ShowMainMenu();
+            string choice = Console.ReadLine()?.Trim();
 
-            if (index == "Exit")
-                break;
-
-            while (index != "Planet" && index != "Comet" && index != "Satellite")
+            switch (choice)
             {
-                Console.WriteLine("Неверный ввод. Введите Planet, Comet, Satellite или Exit:");
-                index = Console.ReadLine()?.Trim();
-                if (index == "Exit")
-                    return;
-            }
-
-            Console.WriteLine($"Вы выбрали: {index}");
-
-            bool menuExit = false;
-            while (!menuExit)
-            {
-                ShowMenu();
-                string choice = Console.ReadLine()?.Trim();
-                menuExit = ProcessMenuChoice(choice, index);
+                case "1":
+                    {
+                        AddPlanet();
+                        break;
+                    }
+                case "2":
+                    {
+                        AddComet();
+                        break;
+                    }
+                case "3":
+                    {
+                        AddSatellite();
+                        break;
+                    }
+                case "4":
+                    {
+                        RemovePlanet();
+                        break;
+                    }
+                case "5":
+                    {
+                        RemoveComet();
+                        break;
+                    }
+                case "6":
+                    {
+                        RemoveSatellite();
+                        break;
+                    }
+                case "7":
+                    {
+                        PrintAllObjects();
+                        break;
+                    }
+                case "8":
+                    {
+                        LoadFromFileMenu();
+                        break;
+                    }
+                case "9":
+                    {
+                        ShowMaxRadiusPlanet();
+                        break;
+                    }
+                case "10":
+                    {
+                        FindPlanetsBetweenCoords();
+                        break;
+                    }
+                case "11":
+                    {
+                        exit = true;
+                        break;
+                    }
+                default:
+                    {
+                        Console.WriteLine("Некорректный выбор, попробуйте снова.");
+                        break;
+                    }
             }
         }
     }
 
-    static void ShowMenu()
+    static void ShowMainMenu()
     {
-        Console.WriteLine("\n=== Панель управления ===");
-        Console.WriteLine("1) Добавить объект");
-        Console.WriteLine("2) Удалить объект");
-        Console.WriteLine("3) Показать объекты");
-        Console.WriteLine("4) Загрузить объекты из файла");
-        Console.WriteLine("5) Планета с максимальным радиусом (только для Planet)");
-        Console.WriteLine("6) Поиск планет между координатами (только для Planet)");
-        Console.WriteLine("7) Вернуться к выбору типа объекта");
+        Console.WriteLine("\n=== Главное меню ===");
+        Console.WriteLine("1) Добавить планету");
+        Console.WriteLine("2) Добавить комету");
+        Console.WriteLine("3) Добавить спутник");
+        Console.WriteLine("4) Удалить планету");
+        Console.WriteLine("5) Удалить комету");
+        Console.WriteLine("6) Удалить спутник");
+        Console.WriteLine("7) Показать все объекты");
+        Console.WriteLine("8) Загрузить объекты из файла");
+        Console.WriteLine("9) Планета с максимальным радиусом");
+        Console.WriteLine("10) Поиск планет между координатами");
+        Console.WriteLine("11) Выход");
         Console.Write("Выберите пункт меню: ");
-    }
-
-    static bool ProcessMenuChoice(string choice, string type)
-    {
-        switch (choice)
-        {
-            case "1":
-                AddObject(type);
-                break;
-            case "2":
-                RemoveObject(type);
-                break;
-            case "3":
-                PrintObjects(type);
-                break;
-            case "4":
-                LoadFromFile(type);
-                break;
-            case "5":
-                ShowMaxRadiusPlanet(type);
-                break;
-            case "6":
-                FindPlanetsBetweenCoords(type);
-                break;
-            case "7":
-                return true;
-            default:
-                Console.WriteLine("Некорректный выбор, попробуйте снова.");
-                break;
-        }
-        return false;
-    }
-
-    static void AddObject(string type)
-    {
-        if (type == "Planet") AddPlanet();
-        else if (type == "Comet") AddComet();
-        else if (type == "Satellite") AddSatellite();
     }
 
     static void AddPlanet()
@@ -186,13 +196,6 @@ class Program
         }
     }
 
-    static void RemoveObject(string type)
-    {
-        if (type == "Planet") RemovePlanet();
-        else if (type == "Comet") RemoveComet();
-        else if (type == "Satellite") RemoveSatellite();
-    }
-
     static void RemovePlanet()
     {
         Console.WriteLine("Введите название планеты для удаления:");
@@ -203,7 +206,10 @@ class Program
             planets.Remove(planet);
             Console.WriteLine("Планета удалена.");
         }
-        else Console.WriteLine("Планета не найдена.");
+        else
+        {
+            Console.WriteLine("Планета не найдена.");
+        }
     }
 
     static void RemoveComet()
@@ -216,7 +222,10 @@ class Program
             comets.Remove(comet);
             Console.WriteLine("Комета удалена.");
         }
-        else Console.WriteLine("Комета не найдена.");
+        else
+        {
+            Console.WriteLine("Комета не найдена.");
+        }
     }
 
     static void RemoveSatellite()
@@ -229,25 +238,65 @@ class Program
             satellites.Remove(satellite);
             Console.WriteLine("Спутник удален.");
         }
-        else Console.WriteLine("Спутник не найден.");
+        else
+        {
+            Console.WriteLine("Спутник не найден.");
+        }
     }
 
-    static void PrintObjects(string type)
+    static void PrintAllObjects()
     {
-        if (type == "Planet")
+        Console.WriteLine("\nВсе планеты:");
+        if (planets.Count == 0)
         {
-            if (!planets.Any()) Console.WriteLine("Планеты не найдены.");
-            else foreach (var p in planets) Console.WriteLine($"\"{p.Name}\" {p.DiscoveryDate} {p.Radius} {p.x} {p.y}");
+            Console.WriteLine("Планеты не найдены.");
         }
-        else if (type == "Comet")
+        else
         {
-            if (!comets.Any()) Console.WriteLine("Кометы не найдены.");
-            else foreach (var c in comets) Console.WriteLine($"\"{c.Name}\" {c.Luminosity} {c.Distance} {c.SpectralType}");
+            foreach (var p in planets)
+            {
+                Console.WriteLine($"\"{p.Name}\" {p.DiscoveryDate} {p.Radius} {p.x} {p.y}");
+            }
         }
-        else if (type == "Satellite")
+
+        Console.WriteLine("\nВсе кометы:");
+        if (comets.Count == 0)
         {
-            if (!satellites.Any()) Console.WriteLine("Спутники не найдены.");
-            else foreach (var s in satellites) Console.WriteLine($"\"{s.Name}\" {s.PlanetName} {s.OrbitalRadius} {s.Mass}");
+            Console.WriteLine("Кометы не найдены.");
+        }
+        else
+        {
+            foreach (var c in comets)
+            {
+                Console.WriteLine($"\"{c.Name}\" {c.Luminosity} {c.Distance} {c.SpectralType}");
+            }
+        }
+
+        Console.WriteLine("\nВсе спутники:");
+        if (satellites.Count == 0)
+        {
+            Console.WriteLine("Спутники не найдены.");
+        }
+        else
+        {
+            foreach (var s in satellites)
+            {
+                Console.WriteLine($"\"{s.Name}\" {s.PlanetName} {s.OrbitalRadius} {s.Mass}");
+            }
+        }
+    }
+
+    static void LoadFromFileMenu()
+    {
+        Console.WriteLine("Выберите тип объектов для загрузки из файла: Planet, Comet, Satellite");
+        string type = Console.ReadLine()?.Trim();
+        if (type == "Planet" || type == "Comet" || type == "Satellite")
+        {
+            LoadFromFile(type);
+        }
+        else
+        {
+            Console.WriteLine("Неверный тип объекта.");
         }
     }
 
@@ -260,71 +309,93 @@ class Program
         }
         var lines = File.ReadAllLines("1.txt");
 
-        var regexForPlanet = new Regex("\"([^\"]+)\"\\s+(\\d{4}\\.\\d{2}\\.\\d{2})\\s+(\\d+(?:\\.\\d+)?)(?:\\s+([-+]?[0-9]*\\.?[0-9]+)\\s+([-+]?[0-9]*\\.?[0-9]+))?");
-        var regexForComet = new Regex("\"([^\"]+)\"\\s+(\\d+(?:\\.\\d+)?)\\s+(\\d+(?:\\.\\d+)?)\\s+(\\w+)");
-        var regexForSatellite = new Regex("\"([^\"]+)\"\\s+(\\w+)\\s+(\\d+(?:\\.\\d+)?)\\s+(\\d+(?:\\.\\d+)?)");
-
         int countAdded = 0;
 
-        foreach (var line in lines)
+        switch (type)
         {
-            switch (type)
-            {
-                case "Planet":
-                    var pm = regexForPlanet.Match(line);
-                    if (pm.Success)
-                    {
-                        planets.Add(new Planet
-                        {
-                            Name = pm.Groups[1].Value,
-                            DiscoveryDate = pm.Groups[2].Value,
-                            Radius = double.Parse(pm.Groups[3].Value.Replace('.', ',')),
-                            x = double.Parse(pm.Groups[4].Value.Replace('.', ',')),
-                            y = double.Parse(pm.Groups[5].Value.Replace('.', ','))
-                        });
-                        countAdded++;
-                    }
-                    break;
-                case "Comet":
-                    var cm = regexForComet.Match(line);
-                    if (cm.Success)
-                    {
-                        comets.Add(new Comet
-                        {
-                            Name = cm.Groups[1].Value,
-                            Luminosity = double.Parse(cm.Groups[2].Value.Replace('.', ',')),
-                            Distance = double.Parse(cm.Groups[3].Value.Replace('.', ',')),
-                            SpectralType = cm.Groups[4].Value
-                        });
-                        countAdded++;
-                    }
-                    break;
-                case "Satellite":
-                    var sm = regexForSatellite.Match(line);
-                    if (sm.Success)
-                    {
-                        satellites.Add(new Satellite
-                        {
-                            Name = sm.Groups[1].Value,
-                            PlanetName = sm.Groups[2].Value,
-                            OrbitalRadius = double.Parse(sm.Groups[3].Value.Replace('.', ',')),
-                            Mass = double.Parse(sm.Groups[4].Value.Replace('.', ','))
-                        });
-                        countAdded++;
-                    }
-                    break;
-            }
+            case "Planet":
+                countAdded = LoadPlanetsFromLines(lines);
+                break;
+            case "Comet":
+                countAdded = LoadCometsFromLines(lines);
+                break;
+            case "Satellite":
+                countAdded = LoadSatellitesFromLines(lines);
+                break;
         }
+
         Console.WriteLine($"{countAdded} объектов типа {type} загружено из файла.");
     }
 
-    static void ShowMaxRadiusPlanet(string type)
+    static int LoadPlanetsFromLines(string[] lines)
     {
-        if (type != "Planet")
+        var regex = new Regex("\"([^\"]+)\"\\s+(\\d{4}\\.\\d{2}\\.\\d{2})\\s+(\\d+(?:\\.\\d+)?)(?:\\s+([-+]?[0-9]*\\.?[0-9]+)\\s+([-+]?[0-9]*\\.?[0-9]+))?");
+        int count = 0;
+        foreach (var line in lines)
         {
-            Console.WriteLine("Функция доступна только для планет.");
-            return;
+            var match = regex.Match(line);
+            if (match.Success)
+            {
+                planets.Add(new Planet
+                {
+                    Name = match.Groups[1].Value,
+                    DiscoveryDate = match.Groups[2].Value,
+                    Radius = double.Parse(match.Groups[3].Value.Replace('.', ',')),
+                    x = double.Parse(match.Groups[4].Value.Replace('.', ',')),
+                    y = double.Parse(match.Groups[5].Value.Replace('.', ','))
+                });
+                count++;
+            }
         }
+        return count;
+    }
+
+    static int LoadCometsFromLines(string[] lines)
+    {
+        var regex = new Regex("\"([^\"]+)\"\\s+(\\d+(?:\\.\\d+)?)\\s+(\\d+(?:\\.\\d+)?)\\s+(\\w+)");
+        int count = 0;
+        foreach (var line in lines)
+        {
+            var match = regex.Match(line);
+            if (match.Success)
+            {
+                comets.Add(new Comet
+                {
+                    Name = match.Groups[1].Value,
+                    Luminosity = double.Parse(match.Groups[2].Value.Replace('.', ',')),
+                    Distance = double.Parse(match.Groups[3].Value.Replace('.', ',')),
+                    SpectralType = match.Groups[4].Value
+                });
+                count++;
+            }
+        }
+        return count;
+    }
+
+    static int LoadSatellitesFromLines(string[] lines)
+    {
+        var regex = new Regex("\"([^\"]+)\"\\s+(\\w+)\\s+(\\d+(?:\\.\\d+)?)\\s+(\\d+(?:\\.\\d+)?)");
+        int count = 0;
+        foreach (var line in lines)
+        {
+            var match = regex.Match(line);
+            if (match.Success)
+            {
+                satellites.Add(new Satellite
+                {
+                    Name = match.Groups[1].Value,
+                    PlanetName = match.Groups[2].Value,
+                    OrbitalRadius = double.Parse(match.Groups[3].Value.Replace('.', ',')),
+                    Mass = double.Parse(match.Groups[4].Value.Replace('.', ','))
+                });
+                count++;
+            }
+        }
+        return count;
+    }
+
+    static void ShowMaxRadiusPlanet()
+    {
         if (planets.Any())
         {
             var maxPlanet = planets.OrderByDescending(p => p.Radius).First();
@@ -336,13 +407,8 @@ class Program
         }
     }
 
-    static void FindPlanetsBetweenCoords(string type)
+    static void FindPlanetsBetweenCoords()
     {
-        if (type != "Planet")
-        {
-            Console.WriteLine("Функция доступна только для планет.");
-            return;
-        }
         Console.WriteLine("Введите координаты для поиска планет в формате: Space_x Space_x1 Space_y Space_y1");
         string input = Console.ReadLine();
         var parts = input.Split(' ');
