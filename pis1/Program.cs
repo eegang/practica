@@ -15,7 +15,23 @@ class Planet
 
 }
 
-class Program
+class Comet
+{
+    public string Name { get; set; }
+    public double Luminosity { get; set; }  
+    public double Distance { get; set; }    
+    public string SpectralType { get; set; }
+
+
+    class Satellite
+    {
+        public string Name { get; set; }
+        public string PlanetName { get; set; }
+        public double OrbitalRadius { get; set; }
+        public double Mass { get; set; }
+    }
+
+    class Program
 {
     static void Main()
     {
