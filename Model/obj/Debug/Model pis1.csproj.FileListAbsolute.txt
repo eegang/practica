@@ -1,0 +1,7 @@
+C:\Users\егор\source\repos\pis1\Model\obj\Debug\Model pis1.csproj.AssemblyReference.cache
+C:\Users\егор\source\repos\pis1\Model\obj\Debug\Model pis1.csproj.CoreCompileInputs.cache
+C:\Users\егор\source\repos\pis1\Model\bin\Debug\Model pis1.dll.config
+C:\Users\егор\source\repos\pis1\Model\bin\Debug\Model pis1.dll
+C:\Users\егор\source\repos\pis1\Model\bin\Debug\Model pis1.pdb
+C:\Users\егор\source\repos\pis1\Model\obj\Debug\Model pis1.dll
+C:\Users\егор\source\repos\pis1\Model\obj\Debug\Model pis1.pdb

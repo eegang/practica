@@ -1,0 +1,17 @@
+C:\Users\егор\source\repos\pis1\Program\obj\Debug\Program.csproj.AssemblyReference.cache
+C:\Users\егор\source\repos\pis1\Program\obj\Debug\Program.csproj.CoreCompileInputs.cache
+C:\Users\егор\source\repos\pis1\Program\bin\Debug\Program.exe.config
+C:\Users\егор\source\repos\pis1\Program\bin\Debug\Program.exe
+C:\Users\егор\source\repos\pis1\Program\bin\Debug\Program.pdb
+C:\Users\егор\source\repos\pis1\Program\bin\Debug\View.dll
+C:\Users\егор\source\repos\pis1\Program\bin\Debug\Buisness logic.dll
+C:\Users\егор\source\repos\pis1\Program\bin\Debug\Model pis1.dll
+C:\Users\егор\source\repos\pis1\Program\bin\Debug\View.pdb
+C:\Users\егор\source\repos\pis1\Program\bin\Debug\View.dll.config
+C:\Users\егор\source\repos\pis1\Program\bin\Debug\Buisness logic.pdb
+C:\Users\егор\source\repos\pis1\Program\bin\Debug\Buisness logic.dll.config
+C:\Users\егор\source\repos\pis1\Program\bin\Debug\Model pis1.pdb
+C:\Users\егор\source\repos\pis1\Program\bin\Debug\Model pis1.dll.config
+C:\Users\егор\source\repos\pis1\Program\obj\Debug\Program.csproj.Up2Date
+C:\Users\егор\source\repos\pis1\Program\obj\Debug\Program.exe
+C:\Users\егор\source\repos\pis1\Program\obj\Debug\Program.pdb

@@ -1,0 +1,30 @@
+C:\Users\егор\source\repos\pis1\UnitTests\obj\Debug\UnitTests.csproj.AssemblyReference.cache
+C:\Users\егор\source\repos\pis1\UnitTests\obj\Debug\UnitTests.csproj.CoreCompileInputs.cache
+C:\Users\егор\source\repos\pis1\UnitTests\bin\Debug\UnitTests.dll
+C:\Users\егор\source\repos\pis1\UnitTests\bin\Debug\UnitTests.pdb
+C:\Users\егор\source\repos\pis1\UnitTests\bin\Debug\Buisness logic.dll
+C:\Users\егор\source\repos\pis1\UnitTests\bin\Debug\Model pis1.dll
+C:\Users\егор\source\repos\pis1\UnitTests\bin\Debug\Buisness logic.pdb
+C:\Users\егор\source\repos\pis1\UnitTests\bin\Debug\Buisness logic.dll.config
+C:\Users\егор\source\repos\pis1\UnitTests\bin\Debug\Model pis1.pdb
+C:\Users\егор\source\repos\pis1\UnitTests\bin\Debug\Model pis1.dll.config
+C:\Users\егор\source\repos\pis1\UnitTests\obj\Debug\UnitTests.csproj.Up2Date
+C:\Users\егор\source\repos\pis1\UnitTests\obj\Debug\UnitTests.dll
+C:\Users\егор\source\repos\pis1\UnitTests\obj\Debug\UnitTests.pdb
+C:\Users\егор\source\repos\pis1\UnitTests\bin\Debug\MSTest.TestFramework.dll
+C:\Users\егор\source\repos\pis1\UnitTests\bin\Debug\MSTest.TestFramework.Extensions.dll
+C:\Users\егор\source\repos\pis1\UnitTests\bin\Debug\MSTest.TestFramework.xml
+C:\Users\егор\source\repos\pis1\UnitTests\bin\Debug\MSTest.TestFramework.Extensions.xml
+C:\Users\егор\source\repos\pis1\UnitTests\bin\Debug\cs\MSTest.TestFramework.resources.dll
+C:\Users\егор\source\repos\pis1\UnitTests\bin\Debug\de\MSTest.TestFramework.resources.dll
+C:\Users\егор\source\repos\pis1\UnitTests\bin\Debug\es\MSTest.TestFramework.resources.dll
+C:\Users\егор\source\repos\pis1\UnitTests\bin\Debug\fr\MSTest.TestFramework.resources.dll
+C:\Users\егор\source\repos\pis1\UnitTests\bin\Debug\it\MSTest.TestFramework.resources.dll
+C:\Users\егор\source\repos\pis1\UnitTests\bin\Debug\ja\MSTest.TestFramework.resources.dll
+C:\Users\егор\source\repos\pis1\UnitTests\bin\Debug\ko\MSTest.TestFramework.resources.dll
+C:\Users\егор\source\repos\pis1\UnitTests\bin\Debug\pl\MSTest.TestFramework.resources.dll
+C:\Users\егор\source\repos\pis1\UnitTests\bin\Debug\pt-BR\MSTest.TestFramework.resources.dll
+C:\Users\егор\source\repos\pis1\UnitTests\bin\Debug\ru\MSTest.TestFramework.resources.dll
+C:\Users\егор\source\repos\pis1\UnitTests\bin\Debug\tr\MSTest.TestFramework.resources.dll
+C:\Users\егор\source\repos\pis1\UnitTests\bin\Debug\zh-Hans\MSTest.TestFramework.resources.dll
+C:\Users\егор\source\repos\pis1\UnitTests\bin\Debug\zh-Hant\MSTest.TestFramework.resources.dll

@@ -1,0 +1,11 @@
+C:\Users\егор\source\repos\pis1\Buisness logic\bin\Debug\Buisness logic.pdb
+C:\Users\егор\source\repos\pis1\Buisness logic\obj\Debug\Buisness logic.csproj.AssemblyReference.cache
+C:\Users\егор\source\repos\pis1\Buisness logic\obj\Debug\Buisness logic.csproj.CoreCompileInputs.cache
+C:\Users\егор\source\repos\pis1\Buisness logic\obj\Debug\Buisness logic.pdb
+C:\Users\егор\source\repos\pis1\Buisness logic\bin\Debug\Buisness logic.dll.config
+C:\Users\егор\source\repos\pis1\Buisness logic\bin\Debug\Buisness logic.dll
+C:\Users\егор\source\repos\pis1\Buisness logic\bin\Debug\Model pis1.dll
+C:\Users\егор\source\repos\pis1\Buisness logic\bin\Debug\Model pis1.pdb
+C:\Users\егор\source\repos\pis1\Buisness logic\bin\Debug\Model pis1.dll.config
+C:\Users\егор\source\repos\pis1\Buisness logic\obj\Debug\Buisness.8C133960.Up2Date
+C:\Users\егор\source\repos\pis1\Buisness logic\obj\Debug\Buisness logic.dll

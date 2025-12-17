@@ -1,0 +1,19 @@
+"Меркурий" 1631.11.07 2439.7 4 8 Planet
+"Венера" 1761.06.06 6051.8 45 7 Planet
+"Земля" 0000.00.00 6371 34 56 Planet
+"Марс" 1610.12.10 3389.5 5 1 Planet
+"Юпитер" 1610.01.07 69911 5 6 Planet
+"Halley" 12.5 100.4 G-type Comet
+"Encke" 8.4 90.2 F-type Comet
+"Tempel" 9.3 85.1 J-type Comet
+"Swift-Tuttle" 25.0 140.5 K-type Comet
+"Wild 2" 15.2 105.3 M-type Comet
+"Phobos" Mars 9377 1.07e16 Satellite
+"Deimos" Mars 23460 1.48e15 Satellite
+"Europa" Jupiter 670900 4.8e22 Satellite
+"Ganymede" Jupiter 1070400 1.48e23 Satellite
+"Callisto" Jupiter 1882700 1.08e23 Satellite
+
+
+
+ 
